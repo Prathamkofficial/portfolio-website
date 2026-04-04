@@ -133,30 +133,25 @@
 
 <body class="bg-stone-50 text-stone-900 dark:bg-stone-950 dark:text-stone-100 transition-colors duration-300">
 
-  <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-stone-50/90 dark:bg-stone-950/90 backdrop-blur-md border-b border-transparent" id="navbar">
     <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <!-- Logo -->
       <a href="#hero" class="font-display text-2xl font-black tracking-tight text-stone-900 dark:text-stone-100">Pratham.</a>
 
-      <!-- Desktop Links -->
       <div class="hidden md:flex items-center gap-8">
         <a href="#about" class="nav-link text-sm font-medium text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors">About</a>
         <a href="#works" class="nav-link text-sm font-medium text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors">Works</a>
         <a href="#contact" class="nav-link text-sm font-medium text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors">Contact</a>
       </div>
 
-      <!-- Right: Resume + Dark Mode -->
       <div class="flex items-center gap-3">
         <button onclick="toggleDark()" class="w-9 h-9 flex items-center justify-center rounded-full border border-stone-200 dark:border-stone-700 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle dark mode">
           <svg id="sun-icon" class="hidden dark:block w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
           <svg id="moon-icon" class="block dark:hidden w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
-        <a href="assets/Resume.pdf" download> class="hidden md:inline-flex items-center gap-2 bg-stone-900 dark:bg-stone-100 text-stone-50 dark:text-stone-900 text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-stone-700 dark:hover:bg-stone-300 transition-colors">
+        <a href="assets/Resume.pdf" download class="hidden md:inline-flex items-center gap-2 bg-stone-900 dark:bg-stone-100 text-stone-50 dark:text-stone-900 text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-stone-700 dark:hover:bg-stone-300 transition-colors">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 4v12M8 12l4 4 4-4M4 20h16"/></svg>
           Resume
         </a>
-        <!-- Mobile hamburger -->
         <button onclick="toggleMenu()" class="md:hidden w-9 h-9 flex items-center justify-center" aria-label="Menu">
           <svg id="ham-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
           <svg id="ham-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
@@ -164,855 +159,21 @@
       </div>
     </div>
 
-    <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden border-t border-stone-100 dark:border-stone-800 bg-stone-50 dark:bg-stone-950 px-6 py-4 flex flex-col gap-4">
       <a href="#about" onclick="closeMenu()" class="text-sm font-medium text-stone-600 dark:text-stone-300">About</a>
       <a href="#works" onclick="closeMenu()" class="text-sm font-medium text-stone-600 dark:text-stone-300">Works</a>
       <a href="#contact" onclick="closeMenu()" class="text-sm font-medium text-stone-600 dark:text-stone-300">Contact</a>
-      <a href="assets/Resume.pdf" download> class="inline-flex items-center gap-2 bg-stone-900 dark:bg-stone-100 text-stone-50 dark:text-stone-900 text-sm font-semibold px-5 py-2.5 rounded-full w-fit">
+      <a href="assets/Resume.pdf" download class="inline-flex items-center gap-2 bg-stone-900 dark:bg-stone-100 text-stone-50 dark:text-stone-900 text-sm font-semibold px-5 py-2.5 rounded-full w-fit">
         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 4v12M8 12l4 4 4-4M4 20h16"/></svg>
         Resume
       </a>
     </div>
   </nav>
 
-  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
-  <section class="min-h-[90vh] flex items-center pt-24 pb-12 px-6">
-    <div class="max-w-6xl mx-auto w-full">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
-
-        <!-- Left: Text -->
-        <div>
-          <p class="animate-fadeup delay-1 text-xs font-semibold tracking-[0.25em] uppercase text-stone-400 dark:text-stone-500 mb-5">Financial Analyst</p>
-
-          <h1 class="animate-fadeup delay-2 font-display text-5xl md:text-6xl lg:text-7xl font-black leading-[1.05] text-stone-900 dark:text-stone-100 mb-7">
-            Translating<br/>
-            <em class="not-italic text-stone-400 dark:text-stone-600">Complex</em><br/>
-            Financial Data<br/>
-            into <em class="italic">Clear,</em><br/>
-            Actionable<br/>
-            Decisions.
-          </h1>
-
-          <p class="animate-fadeup delay-3 text-stone-500 dark:text-stone-400 text-sm md:text-base leading-relaxed mb-10 max-w-md">
-            Finance Graduate&nbsp;·&nbsp;Financial Modeling&nbsp;·&nbsp;Corporate Finance&nbsp;·&nbsp;Data-Driven Insights
-          </p>
-
-          <div class="animate-fadeup delay-4 flex flex-wrap gap-3">
-            <a href="#works" class="bg-stone-900 dark:bg-stone-100 text-stone-50 dark:text-stone-900 font-semibold px-7 py-3.5 rounded-full hover:bg-stone-700 dark:hover:bg-stone-300 transition-colors text-sm">
-              View My Work
-            </a>
-            <a href="assets/Resume.pdf" download> class="border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300 font-semibold px-7 py-3.5 rounded-full hover:border-stone-900 dark:hover:border-stone-100 hover:text-stone-900 dark:hover:text-stone-100 transition-colors text-sm flex items-center gap-2">
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 4v12M8 12l4 4 4-4M4 20h16"/></svg>
-              Download Resume
-            </a>
-          </div>
-        </div>
-
-        <!-- Right: Profile Image -->
-        <div class="animate-fadeup delay-5 flex justify-center md:justify-end">
-          <div class="relative">
-            <!-- Decorative frame -->
-            <div class="absolute -inset-3 rounded-3xl border border-stone-200 dark:border-stone-800 rotate-2"></div>
-            <div class="absolute -inset-3 rounded-3xl border border-stone-100 dark:border-stone-900 -rotate-1"></div>
-            <div class="relative w-full max-w-sm aspect-[4/5]"> rounded-2xl overflow-hidden bg-stone-200 dark:bg-stone-800">
-              <!-- Placeholder image (initials) -->
-              <img src="assets/images/profile.jpg" 
-     class="hero-img w-full h-full object-cover rounded-2xl">
-            </div>
-            <!-- Badge -->
-            <div class="absolute -bottom-4 -left-6 bg-stone-900 dark:bg-stone-100 text-stone-50 dark:text-stone-900 px-4 py-2.5 rounded-2xl shadow-xl">
-              <p class="text-xs font-semibold">Open to Opportunities</p>
-              <p class="text-[10px] text-stone-400 dark:text-stone-600">Corporate Finance · FP&A</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Stats bar -->
-      <div class="mt-20 md:mt-24 grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-stone-200 dark:border-stone-800 pt-10 reveal">
-        <div>
-          <p class="font-display text-4xl font-black text-stone-900 dark:text-stone-100">3+</p>
-          <p class="text-xs text-stone-400 dark:text-stone-500 mt-1">Projects Delivered</p>
-        </div>
-        <div>
-          <p class="font-display text-4xl font-black text-stone-900 dark:text-stone-100">5</p>
-          <p class="text-xs text-stone-400 dark:text-stone-500 mt-1">Certifications</p>
-        </div>
-        <div>
-          <p class="font-display text-4xl font-black text-stone-900 dark:text-stone-100">2</p>
-          <p class="text-xs text-stone-400 dark:text-stone-500 mt-1">Work Experiences</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Marquee divider -->
-  <div class="bg-stone-900 dark:bg-stone-100 text-stone-100 dark:text-stone-900 py-3 overflow-hidden">
-    <div class="marquee-inner flex gap-12 text-xs font-semibold tracking-[0.2em] uppercase">
-      <span class="flex-shrink-0 flex gap-12">
-        <span>Financial Modeling</span><span>·</span><span>DCF Valuation</span><span>·</span><span>Corporate Finance</span><span>·</span><span>Power BI</span><span>·</span><span>Python</span><span>·</span><span>Advanced Excel</span><span>·</span><span>Data-Driven Decisions</span><span>·</span><span>Business Analysis</span><span>·</span>
-      </span>
-      <span class="flex-shrink-0 flex gap-12">
-        <span>Financial Modeling</span><span>·</span><span>DCF Valuation</span><span>·</span><span>Corporate Finance</span><span>·</span><span>Power BI</span><span>·</span><span>Python</span><span>·</span><span>Advanced Excel</span><span>·</span><span>Data-Driven Decisions</span><span>·</span><span>Business Analysis</span><span>·</span>
-      </span>
-    </div>
-  </div>
-
-  <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
-  <section id="about" class="py-24 px-6">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid md:grid-cols-12 gap-16 items-start">
-
-        <!-- Label col -->
-        <div class="md:col-span-3 reveal">
-          <p class="text-xs font-semibold tracking-[0.25em] uppercase text-stone-400 dark:text-stone-500 mb-2">01 /</p>
-          <h2 class="font-display text-4xl font-black leading-tight text-stone-900 dark:text-stone-100">About<br/>Me</h2>
-        </div>
-
-        <!-- Content col -->
-        <div class="md:col-span-9 reveal">
-          <p class="text-xl md:text-2xl font-display font-light leading-relaxed text-stone-700 dark:text-stone-300 mb-6">
-            I am a <strong class="font-black text-stone-900 dark:text-stone-100">Corporate Finance–focused finance graduate</strong> with hands-on experience in financial modeling, valuation, and performance analysis.
-          </p>
-          <p class="text-base leading-relaxed text-stone-500 dark:text-stone-400 mb-5">
-            I specialize in transforming complex financial data into structured insights that support real business decisions. My work combines analytical rigor with practical application—ranging from building automated financial models to evaluating business performance and market trends.
-          </p>
-          <p class="text-base leading-relaxed text-stone-500 dark:text-stone-400 mb-10">
-            I am currently seeking entry-level roles in <strong class="text-stone-700 dark:text-stone-300 font-semibold">Corporate Finance and Financial Analysis</strong> where I can contribute to data-driven decision-making and strategic financial planning.
-          </p>
-
-          <!-- Languages + Location row -->
-          <div class="flex flex-wrap gap-10 border-t border-stone-200 dark:border-stone-800 pt-8">
-            <div>
-              <p class="text-xs text-stone-400 dark:text-stone-500 uppercase tracking-widest mb-2">Languages</p>
-              <p class="text-sm font-semibold text-stone-700 dark:text-stone-300">English · Hindi · Kannada</p>
-            </div>
-            <div>
-              <p class="text-xs text-stone-400 dark:text-stone-500 uppercase tracking-widest mb-2">Based In</p>
-              <p class="text-sm font-semibold text-stone-700 dark:text-stone-300">India</p>
-            </div>
-            <div>
-              <p class="text-xs text-stone-400 dark:text-stone-500 uppercase tracking-widest mb-2">Focus Area</p>
-              <p class="text-sm font-semibold text-stone-700 dark:text-stone-300">Corporate Finance · FP&A</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════ EXPERIENCE ═══════════════════════════ -->
-  <section id="experience" class="py-24 px-6 bg-stone-100 dark:bg-stone-900">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid md:grid-cols-12 gap-16">
-
-        <!-- Label -->
-        <div class="md:col-span-3 reveal">
-          <p class="text-xs font-semibold tracking-[0.25em] uppercase text-stone-400 dark:text-stone-500 mb-2">02 /</p>
-          <h2 class="font-display text-4xl font-black leading-tight text-stone-900 dark:text-stone-100">Experi-<br/>ence</h2>
-        </div>
-
-        <!-- Timeline -->
-        <div class="md:col-span-9 space-y-10">
-
-          <!-- Item 1 -->
-          <div class="timeline-item text-stone-900 dark:text-stone-100 reveal">
-            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
-              <div>
-                <h3 class="font-display text-xl font-black">Wealth Management & Financial Planning Intern</h3>
-                <p class="text-stone-500 dark:text-stone-400 text-sm font-medium mt-0.5">Geojit Financial Services</p>
-              </div>
-              <span class="flex-shrink-0 bg-stone-200 dark:bg-stone-800 text-stone-600 dark:text-stone-400 text-xs font-semibold px-3 py-1.5 rounded-full">Feb 2025 – May 2025</span>
-            </div>
-            <ul class="space-y-2 text-stone-500 dark:text-stone-400 text-sm leading-relaxed">
-              <li class="flex gap-2"><span class="text-stone-300 dark:text-stone-700 mt-1">—</span>Supported financial analysis and portfolio reporting for client advisory</li>
-              <li class="flex gap-2"><span class="text-stone-300 dark:text-stone-700 mt-1">—</span>Analyzed market data to assist senior advisors in investment decisions</li>
-              <li class="flex gap-2"><span class="text-stone-300 dark:text-stone-700 mt-1">—</span>Created structured presentations summarizing insights and recommendations</li>
-            </ul>
-          </div>
-
-          <!-- Item 2 -->
-          <div class="timeline-item text-stone-900 dark:text-stone-100 reveal">
-            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
-              <div>
-                <h3 class="font-display text-xl font-black">Insurance Advisor</h3>
-                <p class="text-stone-500 dark:text-stone-400 text-sm font-medium mt-0.5">HDFC Life · Part-time</p>
-              </div>
-              <span class="flex-shrink-0 bg-stone-200 dark:bg-stone-800 text-stone-600 dark:text-stone-400 text-xs font-semibold px-3 py-1.5 rounded-full">Nov 2024 – Present</span>
-            </div>
-            <ul class="space-y-2 text-stone-500 dark:text-stone-400 text-sm leading-relaxed">
-              <li class="flex gap-2"><span class="text-stone-300 dark:text-stone-700 mt-1">—</span>Assessed client financial needs and recommended insurance-linked solutions</li>
-              <li class="flex gap-2"><span class="text-stone-300 dark:text-stone-700 mt-1">—</span>Gained exposure to financial planning, risk management, and product structuring</li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════ WORKS ═══════════════════════════ -->
-  <section id="works" class="py-24 px-6">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid md:grid-cols-12 gap-16 mb-14">
-        <div class="md:col-span-3 reveal">
-          <p class="text-xs font-semibold tracking-[0.25em] uppercase text-stone-400 dark:text-stone-500 mb-2">03 /</p>
-          <h2 class="font-display text-4xl font-black leading-tight text-stone-900 dark:text-stone-100">Selected<br/>Works</h2>
-        </div>
-        <div class="md:col-span-9 flex items-end reveal">
-          <p class="text-stone-500 dark:text-stone-400 text-sm max-w-md leading-relaxed">
-            Real-world financial models and analytical tools built to solve business problems.
-          </p>
-        </div>
-      </div>
-
-      <!-- Project Cards -->
-      <div class="grid md:grid-cols-3 gap-6">
-
-        <!-- Card 1 -->
-        <div class="project-card reveal group bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-stone-200/50 dark:hover:shadow-stone-900/50">
-          <div class="bg-gradient-to-br from-stone-100 to-stone-200 dark:from-stone-800 dark:to-stone-700 h-44 flex items-center justify-center">
-            <div class="text-center">
-              <p class="font-display text-5xl font-black text-stone-300 dark:text-stone-600">EM</p>
-              <p class="text-xs text-stone-400 dark:text-stone-500 mt-1 font-medium">Financial Model</p>
-            </div>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center gap-2 mb-3">
-              <span class="text-[10px] font-semibold bg-stone-100 dark:bg-stone-800 text-stone-500 dark:text-stone-400 px-2.5 py-1 rounded-full uppercase tracking-wider">Valuation</span>
-              <span class="text-[10px] font-semibold bg-stone-100 dark:bg-stone-800 text-stone-500 dark:text-stone-400 px-2.5 py-1 rounded-full uppercase tracking-wider">DCF</span>
-            </div>
-            <h3 class="font-display text-xl font-black text-stone-900 dark:text-stone-100 mb-2">Eicher Motors – Financial Model & Valuation</h3>
-            <p class="text-stone-500 dark:text-stone-400 text-sm leading-relaxed mb-5">
-              Fully automated 3-statement financial model with DCF & relative valuation, enabling scenario and sensitivity analysis.
-            </p>
-            <a href="https://candied-coat-d76.notion.site/Eicher-Motors-Financial-Model-Valuation-338e8bc357468023b59ce3215ae46280" target="_blank"> class="inline-flex items-center gap-2 text-sm font-semibold text-stone-900 dark:text-stone-100 group-hover:gap-3 transition-all">
-              View Project
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="project-card reveal group bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-stone-200/50 dark:hover:shadow-stone-900/50">
-          <div class="bg-gradient-to-br from-stone-800 to-stone-900 dark:from-stone-700 dark:to-stone-800 h-44 flex items-center justify-center">
-            <div class="text-center">
-              <p class="font-display text-5xl font-black text-stone-600 dark:text-stone-500">HL</p>
-              <p class="text-xs text-stone-500 mt-1 font-medium">Operations Analysis</p>
-            </div>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center gap-2 mb-3">
-              <span class="text-[10px] font-semibold bg-stone-100 dark:bg-stone-800 text-stone-500 dark:text-stone-400 px-2.5 py-1 rounded-full uppercase tracking-wider">Insurance</span>
-              <span class="text-[10px] font-semibold bg-stone-100 dark:bg-stone-800 text-stone-500 dark:text-stone-400 px-2.5 py-1 rounded-full uppercase tracking-wider">Analysis</span>
-            </div>
-            <h3 class="font-display text-xl font-black text-stone-900 dark:text-stone-100 mb-2">HDFC Life – Operations & Financial Analysis</h3>
-            <p class="text-stone-500 dark:text-stone-400 text-sm leading-relaxed mb-5">
-              Evaluated profitability, efficiency, and growth metrics through deep analysis of financial statements and operational workflows.
-            </p>
-            <a href="https://candied-coat-d76.notion.site/HDFC-Life-Financial-Operational-Analysis-338e8bc3574680a8b434c0b78651f6e9" target="_blank"> class="inline-flex items-center gap-2 text-sm font-semibold text-stone-900 dark:text-stone-100 group-hover:gap-3 transition-all">
-              View Project
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="project-card reveal group bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-stone-200/50 dark:hover:shadow-stone-900/50">
-          <div class="bg-gradient-to-br from-stone-200 to-stone-300 dark:from-stone-600 dark:to-stone-700 h-44 flex items-center justify-center">
-            <div class="text-center">
-              <p class="font-display text-5xl font-black text-stone-400 dark:text-stone-800">UAE</p>
-              <p class="text-xs text-stone-400 dark:text-stone-700 mt-1 font-medium">Stock Dashboard</p>
-            </div>
-          </div>
-          <div class="p-6">
-            <div class="flex items-center gap-2 mb-3">
-              <span class="text-[10px] font-semibold bg-stone-100 dark:bg-stone-800 text-stone-500 dark:text-stone-400 px-2.5 py-1 rounded-full uppercase tracking-wider">Python</span>
-              <span class="text-[10px] font-semibold bg-stone-100 dark:bg-stone-800 text-stone-500 dark:text-stone-400 px-2.5 py-1 rounded-full uppercase tracking-wider">Streamlit</span>
-            </div>
-            <h3 class="font-display text-xl font-black text-stone-900 dark:text-stone-100 mb-2">UAE Stock Dashboard</h3>
-            <p class="text-stone-500 dark:text-stone-400 text-sm leading-relaxed mb-5">
-              Streamlit dashboard tracking 50+ UAE stocks with real-time equity monitoring and actionable market insights.
-            </p>
-            <a href="https://stockdash-by-pratham.streamlit.app/" target="_blank"> class="inline-flex items-center gap-2 text-sm font-semibold text-stone-900 dark:text-stone-100 group-hover:gap-3 transition-all">
-              View Project
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════ SKILLS ═══════════════════════════ -->
-  <section id="skills" class="py-24 px-6 bg-stone-100 dark:bg-stone-900">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid md:grid-cols-12 gap-16">
-        <div class="md:col-span-3 reveal">
-          <p class="text-xs font-semibold tracking-[0.25em] uppercase text-stone-400 dark:text-stone-500 mb-2">04 /</p>
-          <h2 class="font-display text-4xl font-black leading-tight text-stone-900 dark:text-stone-100">Skills &<br/>Tools</h2>
-        </div>
-
-        <div class="md:col-span-9 reveal">
-          <!-- Core Skills -->
-          <div class="mb-10">
-            <p class="text-xs font-semibold uppercase tracking-widest text-stone-400 dark:text-stone-500 mb-4">Core Competencies</p>
-            <div class="flex flex-wrap gap-3">
-              <span class="skill-tag bg-stone-900 dark:bg-stone-100 text-stone-50 dark:text-stone-900 px-5 py-2.5 rounded-full text-sm font-semibold">Financial Modeling</span>
-              <span class="skill-tag bg-stone-900 dark:bg-stone-100 text-stone-50 dark:text-stone-900 px-5 py-2.5 rounded-full text-sm font-semibold">Valuation</span>
-              <span class="skill-tag bg-stone-900 dark:bg-stone-100 text-stone-50 dark:text-stone-900 px-5 py-2.5 rounded-full text-sm font-semibold">Corporate Finance</span>
-              <span class="skill-tag bg-stone-900 dark:bg-stone-100 text-stone-50 dark:text-stone-900 px-5 py-2.5 rounded-full text-sm font-semibold">Business Analysis</span>
-              <span class="skill-tag bg-stone-900 dark:bg-stone-100 text-stone-50 dark:text-stone-900 px-5 py-2.5 rounded-full text-sm font-semibold">Management Reporting</span>
-            </div>
-          </div>
-
-          <!-- Tools -->
-          <div class="mb-10">
-            <p class="text-xs font-semibold uppercase tracking-widest text-stone-400 dark:text-stone-500 mb-4">Tools & Technologies</p>
-            <div class="flex flex-wrap gap-3">
-              <span class="skill-tag border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300 px-5 py-2.5 rounded-full text-sm font-medium hover:border-stone-900 dark:hover:border-stone-100 hover:text-stone-900 dark:hover:text-stone-100">Advanced Excel</span>
-              <span class="skill-tag border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300 px-5 py-2.5 rounded-full text-sm font-medium hover:border-stone-900 dark:hover:border-stone-100 hover:text-stone-900 dark:hover:text-stone-100">Power BI</span>
-              <span class="skill-tag border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300 px-5 py-2.5 rounded-full text-sm font-medium hover:border-stone-900 dark:hover:border-stone-100 hover:text-stone-900 dark:hover:text-stone-100">Python</span>
-              <span class="skill-tag border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300 px-5 py-2.5 rounded-full text-sm font-medium hover:border-stone-900 dark:hover:border-stone-100 hover:text-stone-900 dark:hover:text-stone-100">Streamlit</span>
-            </div>
-          </div>
-
-          <!-- Skill bars -->
-          <div class="space-y-4">
-            <p class="text-xs font-semibold uppercase tracking-widest text-stone-400 dark:text-stone-500 mb-4">Proficiency</p>
-            <div class="skill-bar-item">
-              <div class="flex justify-between mb-1.5 text-sm">
-                <span class="font-semibold text-stone-700 dark:text-stone-300">Financial Modeling & Valuation</span>
-                <span class="text-stone-400 dark:text-stone-500">90%</span>
-              </div>
-              <div class="h-1 bg-stone-200 dark:bg-stone-800 rounded-full overflow-hidden">
-                <div class="h-full bg-stone-900 dark:bg-stone-100 rounded-full skill-progress" data-width="90" style="width:0%"></div>
-              </div>
-            </div>
-            <div class="skill-bar-item">
-              <div class="flex justify-between mb-1.5 text-sm">
-                <span class="font-semibold text-stone-700 dark:text-stone-300">Advanced Excel</span>
-                <span class="text-stone-400 dark:text-stone-500">88%</span>
-              </div>
-              <div class="h-1 bg-stone-200 dark:bg-stone-800 rounded-full overflow-hidden">
-                <div class="h-full bg-stone-900 dark:bg-stone-100 rounded-full skill-progress" data-width="88" style="width:0%"></div>
-              </div>
-            </div>
-            <div class="skill-bar-item">
-              <div class="flex justify-between mb-1.5 text-sm">
-                <span class="font-semibold text-stone-700 dark:text-stone-300">Power BI</span>
-                <span class="text-stone-400 dark:text-stone-500">75%</span>
-              </div>
-              <div class="h-1 bg-stone-200 dark:bg-stone-800 rounded-full overflow-hidden">
-                <div class="h-full bg-stone-900 dark:bg-stone-100 rounded-full skill-progress" data-width="75" style="width:0%"></div>
-              </div>
-            </div>
-            <div class="skill-bar-item">
-              <div class="flex justify-between mb-1.5 text-sm">
-                <span class="font-semibold text-stone-700 dark:text-stone-300">Python & Data Analysis</span>
-                <span class="text-stone-400 dark:text-stone-500">70%</span>
-              </div>
-              <div class="h-1 bg-stone-200 dark:bg-stone-800 rounded-full overflow-hidden">
-                <div class="h-full bg-stone-900 dark:bg-stone-100 rounded-full skill-progress" data-width="70" style="width:0%"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════ CHART ═══════════════════════════ -->
-  <section class="py-24 px-6">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid md:grid-cols-12 gap-16 mb-10">
-        <div class="md:col-span-3 reveal">
-          <p class="text-xs font-semibold tracking-[0.25em] uppercase text-stone-400 dark:text-stone-500 mb-2">05 /</p>
-          <h2 class="font-display text-4xl font-black leading-tight text-stone-900 dark:text-stone-100">Portfolio<br/>Snapshot</h2>
-        </div>
-        <div class="md:col-span-9 flex items-end reveal">
-          <p class="text-stone-500 dark:text-stone-400 text-sm max-w-md leading-relaxed">
-            Sample equity portfolio simulation illustrating analytical approach to tracking and benchmarking performance.
-          </p>
-        </div>
-      </div>
-
-      <div class="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl p-8 reveal">
-        <div class="chart-wrap">
-          <canvas id="portfolioChart"></canvas>
-        </div>
-        <p class="text-xs text-stone-400 dark:text-stone-500 text-center mt-4">* Illustrative portfolio data for demonstration purposes only</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════ CERTIFICATIONS ═══════════════════════════ -->
-  <section id="certifications" class="py-24 px-6 bg-stone-100 dark:bg-stone-900">
-    <div class="max-w-6xl mx-auto">
-      <div class="grid md:grid-cols-12 gap-16">
-        <div class="md:col-span-3 reveal">
-          <p class="text-xs font-semibold tracking-[0.25em] uppercase text-stone-400 dark:text-stone-500 mb-2">06 /</p>
-          <h2 class="font-display text-4xl font-black leading-tight text-stone-900 dark:text-stone-100">Certifi-<br/>cations</h2>
-        </div>
-
-        <div class="md:col-span-9">
-          <div class="grid sm:grid-cols-2 gap-4">
-
-            <div class="reveal bg-white dark:bg-stone-800 rounded-2xl p-6 border border-stone-200 dark:border-stone-700 flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl bg-stone-900 dark:bg-stone-100 flex items-center justify-center flex-shrink-0">
-                <svg class="w-5 h-5 text-stone-50 dark:text-stone-900" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              </div>
-              <div>
-                <p class="font-semibold text-stone-900 dark:text-stone-100 text-sm mb-0.5">Private Equity & Venture Capital</p>
-                <p class="text-xs text-stone-400 dark:text-stone-500">Università Bocconi</p>
-              </div>
-            </div>
-
-            <div class="reveal bg-white dark:bg-stone-800 rounded-2xl p-6 border border-stone-200 dark:border-stone-700 flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl bg-stone-900 dark:bg-stone-100 flex items-center justify-center flex-shrink-0">
-                <svg class="w-5 h-5 text-stone-50 dark:text-stone-900" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              </div>
-              <div>
-                <p class="font-semibold text-stone-900 dark:text-stone-100 text-sm mb-0.5">Financial Modeling & Valuation</p>
-                <p class="text-xs text-stone-400 dark:text-stone-500">CFI (Corporate Finance Institute)</p>
-              </div>
-            </div>
-
-            <div class="reveal bg-white dark:bg-stone-800 rounded-2xl p-6 border border-stone-200 dark:border-stone-700 flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl bg-stone-900 dark:bg-stone-100 flex items-center justify-center flex-shrink-0">
-                <svg class="w-5 h-5 text-stone-50 dark:text-stone-900" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              </div>
-              <div>
-                <p class="font-semibold text-stone-900 dark:text-stone-100 text-sm mb-0.5">Power BI</p>
-                <p class="text-xs text-stone-400 dark:text-stone-500">LinkedIn Learning</p>
-              </div>
-            </div>
-
-            <div class="reveal bg-white dark:bg-stone-800 rounded-2xl p-6 border border-stone-200 dark:border-stone-700 flex items-start gap-4">
-              <div class="w-10 h-10 rounded-xl bg-stone-900 dark:bg-stone-100 flex items-center justify-center flex-shrink-0">
-                <svg class="w-5 h-5 text-stone-50 dark:text-stone-900" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              </div>
-              <div>
-                <p class="font-semibold text-stone-900 dark:text-stone-100 text-sm mb-0.5">Advanced Excel</p>
-                <p class="text-xs text-stone-400 dark:text-stone-500">MICE</p>
-              </div>
-            </div>
-
-            <div class="reveal bg-white dark:bg-stone-800 rounded-2xl p-6 border border-stone-200 dark:border-stone-700 flex items-start gap-4 sm:col-span-2 sm:w-1/2">
-              <div class="w-10 h-10 rounded-xl bg-stone-900 dark:bg-stone-100 flex items-center justify-center flex-shrink-0">
-                <svg class="w-5 h-5 text-stone-50 dark:text-stone-900" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              </div>
-              <div>
-                <p class="font-semibold text-stone-900 dark:text-stone-100 text-sm mb-0.5">AI Workflow Automation</p>
-                <p class="text-xs text-stone-400 dark:text-stone-500">Microsoft</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
-  <section id="contact" class="py-32 px-6">
-    <div class="max-w-6xl mx-auto text-center reveal">
-      <p class="text-xs font-semibold tracking-[0.25em] uppercase text-stone-400 dark:text-stone-500 mb-5">07 / Contact</p>
-      <h2 class="font-display text-5xl md:text-7xl font-black text-stone-900 dark:text-stone-100 leading-tight mb-6">
-        Let's<br/><em class="italic text-stone-300 dark:text-stone-600">Connect.</em>
-      </h2>
-      <p class="text-stone-500 dark:text-stone-400 max-w-md mx-auto text-base leading-relaxed mb-12">
-        Open to entry-level opportunities in Corporate Finance and Financial Analysis. Let's build something meaningful together.
-      </p>
-
-      <div class="flex flex-wrap justify-center gap-4">
-        <a href="mailto:ptathamk@gmail.com" class="bg-stone-900 dark:bg-stone-100 text-stone-50 dark:text-stone-900 font-semibold px-8 py-4 rounded-full hover:bg-stone-700 dark:hover:bg-stone-300 transition-colors flex items-center gap-3 text-sm">
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          pratham@example.com
-        </a>
-        <a href="https://github.com/Prathamkoffecial" target="_blank" rel="noopener" 
-   class="border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300 font-semibold px-8 py-4 rounded-full hover:border-stone-900 dark:hover:border-stone-100 hover:text-stone-900 dark:hover:text-stone-100 transition-colors flex items-center gap-3 text-sm">
-  
-  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.87 10.92c.58.1.79-.25.79-.55v-2.1c-3.2.7-3.87-1.54-3.87-1.54-.53-1.35-1.3-1.7-1.3-1.7-1.06-.73.08-.72.08-.72 1.18.08 1.8 1.2 1.8 1.2 1.04 1.8 2.72 1.28 3.39.98.1-.75.4-1.28.73-1.58-2.55-.3-5.24-1.28-5.24-5.7 0-1.26.45-2.3 1.2-3.1-.12-.3-.52-1.5.12-3.12 0 0 .98-.32 3.2 1.2a11.1 11.1 0 0 1 5.82 0c2.22-1.52 3.2-1.2 3.2-1.2.64 1.62.24 2.82.12 3.12.75.8 1.2 1.84 1.2 3.1 0 4.43-2.7 5.4-5.26 5.7.42.36.8 1.08.8 2.18v3.23c0 .3.2.66.8.55A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
-  </svg>
-
-  GitHub Profile
-</a>
-        <a href="https://www.linkedin.com/in/pratham-prashanth/" target="_blank" rel="noopener" class="border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300 font-semibold px-8 py-4 rounded-full hover:border-stone-900 dark:hover:border-stone-100 hover:text-stone-900 dark:hover:text-stone-100 transition-colors flex items-center gap-3 text-sm">
-          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-          LinkedIn Profile
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
-  <footer class="border-t border-stone-200 dark:border-stone-800 py-8 px-6">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="font-display text-xl font-black text-stone-900 dark:text-stone-100">Pratham.</p>
-      <p class="text-xs text-stone-400 dark:text-stone-500">© 2025 Pratham Prashanth · Financial Analyst</p>
-      <div class="flex gap-5 text-xs text-stone-400 dark:text-stone-500">
-        <a href="#about" class="hover:text-stone-700 dark:hover:text-stone-300 transition-colors">About</a>
-        <a href="#works" class="hover:text-stone-700 dark:hover:text-stone-300 transition-colors">Works</a>
-        <a href="#contact" class="hover:text-stone-700 dark:hover:text-stone-300 transition-colors">Contact</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ═══════════════════════════ SCRIPTS ═══════════════════════════ -->
-  <script>
-    // ── Dark Mode ──
-    const html = document.documentElement;
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      html.classList.add('dark');
-    }
-    function toggleDark() {
-      html.classList.toggle('dark');
-      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
-      updateChart();
-    }
-
-    // ── Mobile Menu ──
-    function toggleMenu() {
-      const menu = document.getElementById('mobile-menu');
-      const open = document.getElementById('ham-open');
-      const close = document.getElementById('ham-close');
-      const isHidden = menu.classList.contains('hidden');
-      menu.classList.toggle('hidden', !isHidden);
-      open.classList.toggle('hidden', isHidden);
-      close.classList.toggle('hidden', !isHidden);
-    }
-    function closeMenu() {
-      document.getElementById('mobile-menu').classList.add('hidden');
-      document.getElementById('ham-open').classList.remove('hidden');
-      document.getElementById('ham-close').classList.add('hidden');
-    }
-
-    // ── Navbar scroll ──
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      navbar.classList.toggle('border-stone-200', window.scrollY > 20);
-      navbar.classList.toggle('dark:border-stone-800', window.scrollY > 20);
-      navbar.classList.toggle('shadow-sm', window.scrollY > 20);
-    });
-
-    // ── Scroll Reveal ──
-    const reveals = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          // Skill bars
-          entry.target.querySelectorAll('.skill-progress').forEach(bar => {
-            bar.style.transition = 'width 1s cubic-bezier(.16,1,.3,1)';
-            bar.style.width = bar.dataset.width + '%';
-          });
-        }
-      });
-    }, { threshold: 0.12 });
-    reveals.forEach(el => observer.observe(el));
-
-    // ── Chart ──
-    let chartInstance = null;
-
-    function getChartColors() {
-      const isDark = html.classList.contains('dark');
-      return {
-        gridColor: isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)',
-        tickColor: isDark ? '#a8a29e' : '#78716c',
-        lineColor: isDark ? '#e7e5e4' : '#1c1917',
-        fillStart: isDark ? 'rgba(231,229,228,0.15)' : 'rgba(28,25,23,0.12)',
-        fillEnd: isDark ? 'rgba(231,229,228,0)' : 'rgba(28,25,23,0)',
-        benchColor: isDark ? '#57534e' : '#d4d0cb',
-      };
-    }
-
-    function buildChart() {
-      const ctx = document.getElementById('portfolioChart').getContext('2d');
-      const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-      const portfolio = [100, 104, 102, 109, 113, 111, 118, 122, 119, 126, 131, 138];
-      const benchmark = [100, 102, 101, 105, 107, 106, 109, 112, 110, 114, 117, 121];
-      const c = getChartColors();
-
-      const grad = ctx.createLinearGradient(0, 0, 0, 260);
-      grad.addColorStop(0, c.fillStart);
-      grad.addColorStop(1, c.fillEnd);
-
-      chartInstance = new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: months,
-          datasets: [
-            {
-              label: 'Portfolio',
-              data: portfolio,
-              borderColor: c.lineColor,
-              backgroundColor: grad,
-              borderWidth: 2,
-              pointRadius: 3,
-              pointHoverRadius: 6,
-              fill: true,
-              tension: 0.4,
-            },
-            {
-              label: 'Benchmark (Nifty)',
-              data: benchmark,
-              borderColor: c.benchColor,
-              backgroundColor: 'transparent',
-              borderWidth: 1.5,
-              pointRadius: 2,
-              pointHoverRadius: 5,
-              borderDash: [6, 4],
-              fill: false,
-              tension: 0.4,
-            }
-          ]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          interaction: { mode: 'index', intersect: false },
-          plugins: {
-            legend: {
-              position: 'top',
-              align: 'end',
-              labels: {
-                color: c.tickColor,
-                font: { family: 'DM Sans', size: 12 },
-                boxWidth: 16,
-                padding: 16,
-              }
-            },
-            tooltip: {
-              backgroundColor: html.classList.contains('dark') ? '#1c1917' : '#fff',
-              borderColor: html.classList.contains('dark') ? '#44403c' : '#e7e5e4',
-              borderWidth: 1,
-              titleColor: html.classList.contains('dark') ? '#e7e5e4' : '#1c1917',
-              bodyColor: html.classList.contains('dark') ? '#a8a29e' : '#78716c',
-              padding: 12,
-              callbacks: {
-                label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y.toFixed(1)} (Indexed)`,
-              }
-            }
-          },
-          scales: {
-            x: {
-              grid: { color: c.gridColor },
-              ticks: { color: c.tickColor, font: { family: 'DM Sans', size: 11 } },
-              border: { display: false },
-            },
-            y: {
-              grid: { color: c.gridColor },
-              ticks: { color: c.tickColor, font: { family: 'DM Sans', size: 11 } },
-              border: { display: false },
-              min: 95,
-            }
-          }
-        }
-      });
-    }
-
-    function updateChart() {
-      if (chartInstance) { chartInstance.destroy(); }
-      buildChart();
-    }
-
-    // Init chart when visible
-    const chartSection = document.querySelector('.chart-wrap').closest('section');
-    const chartObs = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting && !chartInstance) { buildChart(); }
-    }, { threshold: 0.2 });
-    chartObs.observe(chartSection);
-  </script>
-</body>
-</html><!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pratham Prashanth — Financial Analyst</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,700;0,900;1,300;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            display: ['Fraunces', 'serif'],
-            body: ['DM Sans', 'sans-serif'],
-          },
-        }
-      }
-    }
-  </script>
-
-  <style>
-    * { font-family: 'DM Sans', sans-serif; }
-    .font-display { font-family: 'Fraunces', serif; }
-
-    /* Animations */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(32px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to   { opacity: 1; }
-    }
-    @keyframes lineGrow {
-      from { width: 0; }
-      to   { width: 100%; }
-    }
-    .animate-fadeup { animation: fadeUp 0.8s cubic-bezier(.16,1,.3,1) both; }
-    .animate-fadein { animation: fadeIn 0.6s ease both; }
-    .delay-1 { animation-delay: 0.1s; }
-    .delay-2 { animation-delay: 0.25s; }
-    .delay-3 { animation-delay: 0.4s; }
-    .delay-4 { animation-delay: 0.55s; }
-    .delay-5 { animation-delay: 0.7s; }
-
-    /* Scroll reveal */
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s cubic-bezier(.16,1,.3,1), transform 0.7s cubic-bezier(.16,1,.3,1); }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-
-    /* Noise texture overlay */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 9999;
-      opacity: 0.4;
-    }
-
-    /* Dark mode noise */
-    .dark body::before { opacity: 0.15; }
-
-    /* Timeline */
-    .timeline-item { position: relative; padding-left: 2rem; }
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 8px;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: currentColor;
-    }
-    .timeline-item::after {
-      content: '';
-      position: absolute;
-      left: 3.5px;
-      top: 20px;
-      bottom: -2rem;
-      width: 1px;
-      background: currentColor;
-      opacity: 0.15;
-    }
-    .timeline-item:last-child::after { display: none; }
-
-    /* Project card hover */
-    .project-card { transition: transform 0.35s cubic-bezier(.16,1,.3,1), box-shadow 0.35s; }
-    .project-card:hover { transform: translateY(-6px); }
-
-    /* Skill tag */
-    .skill-tag { transition: background 0.2s, color 0.2s, transform 0.2s; }
-    .skill-tag:hover { transform: scale(1.05); }
-
-    /* Nav link underline */
-    .nav-link { position: relative; }
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -2px;
-      height: 1px;
-      width: 0;
-      background: currentColor;
-      transition: width 0.3s ease;
-    }
-    .nav-link:hover::after { width: 100%; }
-
-    /* Image grayscale on hover */
-    .hero-img { filter: grayscale(20%); transition: filter 0.4s; }
-    .hero-img:hover { filter: grayscale(0%); }
-
-    /* Marquee */
-    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-    .marquee-inner { animation: marquee 18s linear infinite; white-space: nowrap; }
-
-    /* Chart container */
-    .chart-wrap { position: relative; height: 260px; }
-
-    /* Dark mode transition */
-    html { transition: background 0.3s, color 0.3s; }
-
-    /* Active nav */
-    .nav-active::after { width: 100% !important; }
-  </style>
-</head>
-
-<body class="bg-stone-50 text-stone-900 dark:bg-stone-950 dark:text-stone-100 transition-colors duration-300">
-
-  <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
-  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-stone-50/90 dark:bg-stone-950/90 backdrop-blur-md border-b border-transparent" id="navbar">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-      <!-- Logo -->
-      <a href="#hero" class="font-display text-2xl font-black tracking-tight text-stone-900 dark:text-stone-100">Pratham.</a>
-
-      <!-- Desktop Links -->
-      <div class="hidden md:flex items-center gap-8">
-        <a href="#about" class="nav-link text-sm font-medium text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors">About</a>
-        <a href="#works" class="nav-link text-sm font-medium text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors">Works</a>
-        <a href="#contact" class="nav-link text-sm font-medium text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors">Contact</a>
-      </div>
-
-      <!-- Right: Resume + Dark Mode -->
-      <div class="flex items-center gap-3">
-        <button onclick="toggleDark()" class="w-9 h-9 flex items-center justify-center rounded-full border border-stone-200 dark:border-stone-700 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors" aria-label="Toggle dark mode">
-          <svg id="sun-icon" class="hidden dark:block w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-          <svg id="moon-icon" class="block dark:hidden w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        </button>
-        <a href="#" download class="hidden md:inline-flex items-center gap-2 bg-stone-900 dark:bg-stone-100 text-stone-50 dark:text-stone-900 text-sm font-semibold px-5 py-2.5 rounded-full hover:bg-stone-700 dark:hover:bg-stone-300 transition-colors">
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 4v12M8 12l4 4 4-4M4 20h16"/></svg>
-          Resume
-        </a>
-        <!-- Mobile hamburger -->
-        <button onclick="toggleMenu()" class="md:hidden w-9 h-9 flex items-center justify-center" aria-label="Menu">
-          <svg id="ham-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-          <svg id="ham-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-stone-100 dark:border-stone-800 bg-stone-50 dark:bg-stone-950 px-6 py-4 flex flex-col gap-4">
-      <a href="#about" onclick="closeMenu()" class="text-sm font-medium text-stone-600 dark:text-stone-300">About</a>
-      <a href="#works" onclick="closeMenu()" class="text-sm font-medium text-stone-600 dark:text-stone-300">Works</a>
-      <a href="#contact" onclick="closeMenu()" class="text-sm font-medium text-stone-600 dark:text-stone-300">Contact</a>
-      <a href="#" download class="inline-flex items-center gap-2 bg-stone-900 dark:bg-stone-100 text-stone-50 dark:text-stone-900 text-sm font-semibold px-5 py-2.5 rounded-full w-fit">
-        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 4v12M8 12l4 4 4-4M4 20h16"/></svg>
-        Resume
-      </a>
-    </div>
-  </nav>
-
-  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
   <section id="hero" class="min-h-screen flex items-center pt-20 pb-12 px-6">
     <div class="max-w-6xl mx-auto w-full">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-center">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
 
-        <!-- Left: Text -->
         <div>
           <p class="animate-fadeup delay-1 text-xs font-semibold tracking-[0.25em] uppercase text-stone-400 dark:text-stone-500 mb-5">Financial Analyst</p>
 
@@ -1033,26 +194,20 @@
             <a href="#works" class="bg-stone-900 dark:bg-stone-100 text-stone-50 dark:text-stone-900 font-semibold px-7 py-3.5 rounded-full hover:bg-stone-700 dark:hover:bg-stone-300 transition-colors text-sm">
               View My Work
             </a>
-            <a href="#" download class="border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300 font-semibold px-7 py-3.5 rounded-full hover:border-stone-900 dark:hover:border-stone-100 hover:text-stone-900 dark:hover:text-stone-100 transition-colors text-sm flex items-center gap-2">
+            <a href="assets/Resume.pdf" download class="border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300 font-semibold px-7 py-3.5 rounded-full hover:border-stone-900 dark:hover:border-stone-100 hover:text-stone-900 dark:hover:text-stone-100 transition-colors text-sm flex items-center gap-2">
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 4v12M8 12l4 4 4-4M4 20h16"/></svg>
               Download Resume
             </a>
           </div>
         </div>
 
-        <!-- Right: Profile Image -->
         <div class="animate-fadeup delay-5 flex justify-center md:justify-end">
           <div class="relative">
-            <!-- Decorative frame -->
             <div class="absolute -inset-3 rounded-3xl border border-stone-200 dark:border-stone-800 rotate-2"></div>
             <div class="absolute -inset-3 rounded-3xl border border-stone-100 dark:border-stone-900 -rotate-1"></div>
-            <div class="relative w-full max-w-sm aspect-[4/5]"> rounded-2xl overflow-hidden bg-stone-200 dark:bg-stone-800">
-              <!-- Placeholder image (initials) -->
-              <div class="hero-img w-full h-full flex items-center justify-center bg-gradient-to-br from-stone-200 via-stone-100 to-stone-300 dark:from-stone-700 dark:via-stone-800 dark:to-stone-700">
-                <span class="font-display text-8xl font-black text-stone-400 dark:text-stone-600 select-none"><img src="assets/images/profile.jpg"       class="hero-img w-full h-full object-cover rounded-2xl"></span>
-              </div>
+            <div class="relative w-72 h-80 md:w-80 md:h-96 rounded-2xl overflow-hidden bg-stone-200 dark:bg-stone-800">
+              <img src="assets/profile.jpg" alt="Pratham Profile" class="hero-img w-full h-full object-cover">
             </div>
-            <!-- Badge -->
             <div class="absolute -bottom-4 -left-6 bg-stone-900 dark:bg-stone-100 text-stone-50 dark:text-stone-900 px-4 py-2.5 rounded-2xl shadow-xl">
               <p class="text-xs font-semibold">Open to Opportunities</p>
               <p class="text-[10px] text-stone-400 dark:text-stone-600">Corporate Finance · FP&A</p>
@@ -1061,8 +216,7 @@
         </div>
       </div>
 
-      <!-- Stats bar -->
-      <div class="mt-20 md:mt-24 grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-stone-200 dark:border-stone-800 pt-10 reveal">
+      <div class="mt-20 md:mt-24 grid grid-cols-3 gap-6 border-t border-stone-200 dark:border-stone-800 pt-10 reveal">
         <div>
           <p class="font-display text-4xl font-black text-stone-900 dark:text-stone-100">3+</p>
           <p class="text-xs text-stone-400 dark:text-stone-500 mt-1">Projects Delivered</p>
@@ -1079,7 +233,6 @@
     </div>
   </section>
 
-  <!-- Marquee divider -->
   <div class="bg-stone-900 dark:bg-stone-100 text-stone-100 dark:text-stone-900 py-3 overflow-hidden">
     <div class="marquee-inner flex gap-12 text-xs font-semibold tracking-[0.2em] uppercase">
       <span class="flex-shrink-0 flex gap-12">
@@ -1091,18 +244,15 @@
     </div>
   </div>
 
-  <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
   <section id="about" class="py-24 px-6">
     <div class="max-w-6xl mx-auto">
       <div class="grid md:grid-cols-12 gap-16 items-start">
 
-        <!-- Label col -->
         <div class="md:col-span-3 reveal">
           <p class="text-xs font-semibold tracking-[0.25em] uppercase text-stone-400 dark:text-stone-500 mb-2">01 /</p>
           <h2 class="font-display text-4xl font-black leading-tight text-stone-900 dark:text-stone-100">About<br/>Me</h2>
         </div>
 
-        <!-- Content col -->
         <div class="md:col-span-9 reveal">
           <p class="text-xl md:text-2xl font-display font-light leading-relaxed text-stone-700 dark:text-stone-300 mb-6">
             I am a <strong class="font-black text-stone-900 dark:text-stone-100">Corporate Finance–focused finance graduate</strong> with hands-on experience in financial modeling, valuation, and performance analysis.
@@ -1114,7 +264,6 @@
             I am currently seeking entry-level roles in <strong class="text-stone-700 dark:text-stone-300 font-semibold">Corporate Finance and Financial Analysis</strong> where I can contribute to data-driven decision-making and strategic financial planning.
           </p>
 
-          <!-- Languages + Location row -->
           <div class="flex flex-wrap gap-10 border-t border-stone-200 dark:border-stone-800 pt-8">
             <div>
               <p class="text-xs text-stone-400 dark:text-stone-500 uppercase tracking-widest mb-2">Languages</p>
@@ -1134,21 +283,17 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════ EXPERIENCE ═══════════════════════════ -->
   <section id="experience" class="py-24 px-6 bg-stone-100 dark:bg-stone-900">
     <div class="max-w-6xl mx-auto">
       <div class="grid md:grid-cols-12 gap-16">
 
-        <!-- Label -->
         <div class="md:col-span-3 reveal">
           <p class="text-xs font-semibold tracking-[0.25em] uppercase text-stone-400 dark:text-stone-500 mb-2">02 /</p>
           <h2 class="font-display text-4xl font-black leading-tight text-stone-900 dark:text-stone-100">Experi-<br/>ence</h2>
         </div>
 
-        <!-- Timeline -->
         <div class="md:col-span-9 space-y-10">
 
-          <!-- Item 1 -->
           <div class="timeline-item text-stone-900 dark:text-stone-100 reveal">
             <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
               <div>
@@ -1164,7 +309,6 @@
             </ul>
           </div>
 
-          <!-- Item 2 -->
           <div class="timeline-item text-stone-900 dark:text-stone-100 reveal">
             <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">
               <div>
@@ -1184,7 +328,6 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════ WORKS ═══════════════════════════ -->
   <section id="works" class="py-24 px-6">
     <div class="max-w-6xl mx-auto">
       <div class="grid md:grid-cols-12 gap-16 mb-14">
@@ -1199,10 +342,8 @@
         </div>
       </div>
 
-      <!-- Project Cards -->
       <div class="grid md:grid-cols-3 gap-6">
 
-        <!-- Card 1 -->
         <div class="project-card reveal group bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-stone-200/50 dark:hover:shadow-stone-900/50">
           <div class="bg-gradient-to-br from-stone-100 to-stone-200 dark:from-stone-800 dark:to-stone-700 h-44 flex items-center justify-center">
             <div class="text-center">
@@ -1219,14 +360,13 @@
             <p class="text-stone-500 dark:text-stone-400 text-sm leading-relaxed mb-5">
               Fully automated 3-statement financial model with DCF & relative valuation, enabling scenario and sensitivity analysis.
             </p>
-            <a href="#" class="inline-flex items-center gap-2 text-sm font-semibold text-stone-900 dark:text-stone-100 group-hover:gap-3 transition-all">
+            <a href="https://candied-coat-d76.notion.site/Eicher-Motors-Financial-Model-Valuation-338e8bc357468023b59ce3215ae46280" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-semibold text-stone-900 dark:text-stone-100 group-hover:gap-3 transition-all">
               View Project
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
         </div>
 
-        <!-- Card 2 -->
         <div class="project-card reveal group bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-stone-200/50 dark:hover:shadow-stone-900/50">
           <div class="bg-gradient-to-br from-stone-800 to-stone-900 dark:from-stone-700 dark:to-stone-800 h-44 flex items-center justify-center">
             <div class="text-center">
@@ -1243,14 +383,13 @@
             <p class="text-stone-500 dark:text-stone-400 text-sm leading-relaxed mb-5">
               Evaluated profitability, efficiency, and growth metrics through deep analysis of financial statements and operational workflows.
             </p>
-            <a href="#" class="inline-flex items-center gap-2 text-sm font-semibold text-stone-900 dark:text-stone-100 group-hover:gap-3 transition-all">
+            <a href="https://candied-coat-d76.notion.site/HDFC-Life-Financial-Operational-Analysis-338e8bc3574680a8b434c0b78651f6e9" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-semibold text-stone-900 dark:text-stone-100 group-hover:gap-3 transition-all">
               View Project
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
           </div>
         </div>
 
-        <!-- Card 3 -->
         <div class="project-card reveal group bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-2xl overflow-hidden hover:shadow-2xl hover:shadow-stone-200/50 dark:hover:shadow-stone-900/50">
           <div class="bg-gradient-to-br from-stone-200 to-stone-300 dark:from-stone-600 dark:to-stone-700 h-44 flex items-center justify-center">
             <div class="text-center">
@@ -1267,7 +406,7 @@
             <p class="text-stone-500 dark:text-stone-400 text-sm leading-relaxed mb-5">
               Streamlit dashboard tracking 50+ UAE stocks with real-time equity monitoring and actionable market insights.
             </p>
-            <a href="#" class="inline-flex items-center gap-2 text-sm font-semibold text-stone-900 dark:text-stone-100 group-hover:gap-3 transition-all">
+            <a href="https://stockdash-by-pratham.streamlit.app/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-sm font-semibold text-stone-900 dark:text-stone-100 group-hover:gap-3 transition-all">
               View Project
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
@@ -1278,7 +417,6 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════ SKILLS ═══════════════════════════ -->
   <section id="skills" class="py-24 px-6 bg-stone-100 dark:bg-stone-900">
     <div class="max-w-6xl mx-auto">
       <div class="grid md:grid-cols-12 gap-16">
@@ -1288,7 +426,6 @@
         </div>
 
         <div class="md:col-span-9 reveal">
-          <!-- Core Skills -->
           <div class="mb-10">
             <p class="text-xs font-semibold uppercase tracking-widest text-stone-400 dark:text-stone-500 mb-4">Core Competencies</p>
             <div class="flex flex-wrap gap-3">
@@ -1300,7 +437,6 @@
             </div>
           </div>
 
-          <!-- Tools -->
           <div class="mb-10">
             <p class="text-xs font-semibold uppercase tracking-widest text-stone-400 dark:text-stone-500 mb-4">Tools & Technologies</p>
             <div class="flex flex-wrap gap-3">
@@ -1311,7 +447,6 @@
             </div>
           </div>
 
-          <!-- Skill bars -->
           <div class="space-y-4">
             <p class="text-xs font-semibold uppercase tracking-widest text-stone-400 dark:text-stone-500 mb-4">Proficiency</p>
             <div class="skill-bar-item">
@@ -1356,7 +491,6 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════ CHART ═══════════════════════════ -->
   <section class="py-24 px-6">
     <div class="max-w-6xl mx-auto">
       <div class="grid md:grid-cols-12 gap-16 mb-10">
@@ -1380,7 +514,6 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════ CERTIFICATIONS ═══════════════════════════ -->
   <section id="certifications" class="py-24 px-6 bg-stone-100 dark:bg-stone-900">
     <div class="max-w-6xl mx-auto">
       <div class="grid md:grid-cols-12 gap-16">
@@ -1448,7 +581,6 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
   <section id="contact" class="py-32 px-6">
     <div class="max-w-6xl mx-auto text-center reveal">
       <p class="text-xs font-semibold tracking-[0.25em] uppercase text-stone-400 dark:text-stone-500 mb-5">07 / Contact</p>
@@ -1464,15 +596,18 @@
           <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           ptathamk@gmail.com
         </a>
-        <a href="https://www.linkedin.com/in/pratham-prashanth/" target="_blank" rel="noopener" class="border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300 font-semibold px-8 py-4 rounded-full hover:border-stone-900 dark:hover:border-stone-100 hover:text-stone-900 dark:hover:text-stone-100 transition-colors flex items-center gap-3 text-sm">
+        <a href="https://linkedin.com/in/pratham-prashanth/" target="_blank" rel="noopener" class="border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300 font-semibold px-8 py-4 rounded-full hover:border-stone-900 dark:hover:border-stone-100 hover:text-stone-900 dark:hover:text-stone-100 transition-colors flex items-center gap-3 text-sm">
           <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
           LinkedIn Profile
+        </a>
+        <a href="https://github.com/Prathamkofficial" target="_blank" rel="noopener" class="border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300 font-semibold px-8 py-4 rounded-full hover:border-stone-900 dark:hover:border-stone-100 hover:text-stone-900 dark:hover:text-stone-100 transition-colors flex items-center gap-3 text-sm">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          GitHub Profile
         </a>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
   <footer class="border-t border-stone-200 dark:border-stone-800 py-8 px-6">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
       <p class="font-display text-xl font-black text-stone-900 dark:text-stone-100">Pratham.</p>
@@ -1485,7 +620,6 @@
     </div>
   </footer>
 
-  <!-- ═══════════════════════════ SCRIPTS ═══════════════════════════ -->
   <script>
     // ── Dark Mode ──
     const html = document.documentElement;
